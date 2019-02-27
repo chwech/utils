@@ -1,0 +1,67 @@
+@import 'reset.less';
+
+// 这种注释不会保留到css文件
+
+/*
+这种注释会保留到css文件
+*/
+
+// 水平垂直剧中
+.center(@x:50%, @y:50%) {
+  position: absolute;
+  top: @y;
+  left: @x;
+  transform: translate(-@x, -@y);
+}
+
+// 左浮动(加括号这个混合就不会编译成类出现在css中)
+.fl() {
+  float: left;
+}
+// 右浮动
+.fr() {
+  float: right;
+}
+// 清除浮动
+.fix() {
+  zoom: 1;
+  &:after { // ie8+
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+// 弹性盒子
+.flexbox() {
+  display: flex;
+}
+
+// css画三角形
+@triangle-height: 10px;
+@triangle-color: green;
+.triangle(top, @height: @triangle-height, @color: @triangle-color) {
+  border: @height solid;    
+  border-color: transparent transparent @color transparent;
+}
+.triangle(bottom, @height: @triangle-height, @color: @triangle-color) {
+  border: @height solid;  
+  border-color: @color transparent transparent transparent;
+}
+.triangle(left, @height: @triangle-height, @color: @triangle-color) {
+  border: @height solid;  
+  border-color: transparent @color transparent transparent;
+}
+.triangle(right, @height: @triangle-height, @color: @triangle-color) {
+  border: @height solid;  
+  border-color: transparent transparent transparent @color;
+}
+.triangle(@_) {
+  width: 0;
+  height: 0;
+}
+// 文本超出显示...
+.ellipsis_txt() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

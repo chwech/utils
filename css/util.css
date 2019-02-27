@@ -1,0 +1,20 @@
+/* 重置浏览器默认样式 start */
+body,
+div,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-size: 16px;
+}
+/* 重置浏览器默认样式 end */
+/*
+这种注释会保留到css文件
+*/

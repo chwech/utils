@@ -1,0 +1,34 @@
+@import 'util.less';
+
+.box-size(@bg: blue) {
+  width: 200px;
+  height: 200px;
+  background: @bg;
+}
+.box {
+  .box-size;
+  .center;
+} 
+
+.box2 {
+  .fix;
+  background-color: black;
+  > .box3 {
+    .fl;
+    .box-size(yellow);
+  
+  }
+
+  > .box4 {
+    .fr;
+    .box-size(red);
+  }
+}
+
+.box5 {
+  .triangle(right, 20px, red);
+}
+
+.box6 {
+  height: `document.body.clientHeight`;
+}

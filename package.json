@@ -1,0 +1,16 @@
+{
+  "name": "chwech-util",
+  "version": "0.0.0",
+  "description": "我的工具类库",
+  "main": "dist/chwech-utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --color"
+  },
+  "author": "chwech",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
