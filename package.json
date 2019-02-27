@@ -19,5 +19,6 @@
   },
   "keywords": [
     "utils"
-  ]
+  ],
+  "types": "./types/index.d.ts"
 }
