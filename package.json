@@ -1,6 +1,6 @@
 {
   "name": "@chwech/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "我的工具类库",
   "main": "dist/chwech-utils.js",
   "scripts": {
