@@ -15,10 +15,20 @@ a {
   text-decoration: none;
 }
 
-// 全局字体
 html {
+  // 全局字体
   font-family: @font-family;
+  // 重置盒模型, 使width和height不受border和padding影响
+  box-sizing: border-box;
 }
+
+// 重置盒模型, 使width和height不受border和padding影响
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   font-size: @fs16;
 }
