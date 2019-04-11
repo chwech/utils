@@ -1,4 +1,6 @@
-本时工作中用到的一些常用工具函数和样式
+![npm](https://img.shields.io/npm/dt/@chwech/utils.svg)
+
+平时工作中用到的一些常用工具函数和样式
 
 ## 文档
 [js函数文档点击查看](./doc/javascript.md)  
