@@ -1,13 +1,13 @@
 class Cookie {
   constructor() {}
   //获取cookie
-  get(name) {
-    var cookieName = encodeURIComponent(name) + "=",
-      cookieStart = document.cookie.indexOf(cookieName),
-      cookieValue = null;
+  get(name: string): string | null {
+    var cookieName: string = encodeURIComponent(name) + "=",
+      cookieStart: number = document.cookie.indexOf(cookieName),
+      cookieValue: string | null = null;
 
     if (cookieStart > -1) {
-      var cookieEnd = document.cookie.indexOf(";", cookieStart);
+      var cookieEnd: number = document.cookie.indexOf(";", cookieStart);
       if (cookieEnd == -1) {
         cookieEnd = document.cookie.length;
       }
@@ -19,11 +19,11 @@ class Cookie {
     return cookieValue;
   }
   //设置cookie
-  set(name, value, expires, path, domain, secure) {
-    var cookieText = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+  set(name: string, value: string, expires: Date, path: string, domain: string, secure: string): void {
+    var cookieText: string = encodeURIComponent(name) + "=" + encodeURIComponent(value);
 
     if (expires instanceof Date) {
-      cookieText += "; expires" + expires.toGMTString();
+      cookieText += "; expires" + expires.toUTCString();
     }
     if (path) {
       cookieText += "; path" + path;
@@ -38,7 +38,7 @@ class Cookie {
     document.cookie = cookieText;
   }
   //删除cookie
-  unset(name, path, domain, secure) {
+  unset(name: string, path: string, domain: string, secure: string): void {
     this.set(name, "", new Date(0), path, domain, secure);
   }
 }
