@@ -11,15 +11,17 @@
   "author": "chwech",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/chwech/utils.git"
   },
   "keywords": [
-    "utils"
-  ],
-  "types": "./types/index.d.ts"
+    "utils",
+    "chwech"
+  ]
 }

@@ -2,7 +2,11 @@ const path = require('path')
 
 module.exports = {
   mode: 'development',
-  entry: './index.js',
+  entry: './src/index.ts',
+  resolve: {
+    // Add `.ts` and `.tsx` as a resolvable extension.
+    extensions: [".ts", ".tsx", ".js"]
+  },
   output: {
     filename: 'chwech-utils.js', // 打包后输出的文件名
     path: path.resolve(__dirname, 'dist'), // 打包后输出的路径
@@ -16,5 +20,11 @@ module.exports = {
     // libraryTarget: 'amd'
     // libraryTarget: 'jsonp' // 把入口起点的返回值，包裹到一个 jsonp 包装容器中
     libraryTarget: 'umd' // 将你的 library 暴露为所有的模块定义下都可运行的方式。它将在 CommonJS, AMD 环境下运行，或将模块导出到 global 下的变量。 
+  },
+  module: {
+    rules: [
+      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
+      { test: /\.tsx?$/, loader: "ts-loader" }
+    ]
   }
 }
