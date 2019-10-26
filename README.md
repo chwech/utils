@@ -1,4 +1,5 @@
 ![npm](https://img.shields.io/npm/dt/@chwech/utils.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@chwech/utils)
 
 平时工作中用到的一些常用工具函数和样式
 
