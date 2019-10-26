@@ -3,7 +3,7 @@
  * @param {String} fontFamily
  * @return {Boolean} 
  */
-var isSupportFontFamily = function(fontFamily) {
+var isSupportFontFamily = function(fontFamily: string) {
   if (typeof fontFamily != "string") {
     return false;
   }
@@ -23,11 +23,18 @@ var isSupportFontFamily = function(fontFamily) {
   var context = canvas.getContext("2d");
   canvas.width = width;
   canvas.height = height;
+
+  if (!context) {
+    return false
+  }
   // 全局一致的绘制设定
   context.textAlign = "center";
   context.fillStyle = "black";
   context.textBaseline = "middle";
-  var getFontData = function(fontFamily) {
+  var getFontData = function(fontFamily: string) {
+    if (!context) {
+      return []
+    }
     // 清除
     context.clearRect(0, 0, width, height);
     // 设置字体

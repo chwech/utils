@@ -49,7 +49,14 @@ export function getQueryString(name: string): string | null {
   return null;
 }
 
-// 自定义判断元素类型JS
+/**
+ * 判断数据类型
+ * @author chwech
+ * @date 2019-10-25
+ * @export
+ * @param {Object} obj 要判断的变量
+ * @returns {(string | null)} 返回类型
+ */
 export function toType(obj: Object): string | null {
   const match = ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)
   if (match) {

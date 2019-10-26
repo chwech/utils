@@ -64,7 +64,14 @@
         return null;
     }
     exports.getQueryString = getQueryString;
-    // 自定义判断元素类型JS
+    /**
+     * 判断数据类型
+     * @author chwech
+     * @date 2019-10-25
+     * @export
+     * @param {Object} obj 要判断的变量
+     * @returns {(string | null)} 返回类型
+     */
     function toType(obj) {
         var match = ({}).toString.call(obj).match(/\s([a-zA-Z]+)/);
         if (match) {
