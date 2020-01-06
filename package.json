@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js --color",
     "dev": "tsc -p tsconfig.json --watch",
-    "doc": "jsdoc README.md dist -r -d doc"
+    "doc": "jsdoc README.md dist -r -d docs"
   },
   "author": "chwech",
   "license": "ISC",
