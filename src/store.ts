@@ -4,7 +4,6 @@ class Store {
    * @author chwech
    * @date 2019-10-26
    * @param {string} name 缓存的键名，支持"wechat.user.name"格式来获取值，前提是缓存值是一个JSON字符串
-   * @returns 
    * @memberof Store
    */
   getStore (name: string) { 

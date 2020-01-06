@@ -1,6 +1,19 @@
+
+/**
+ * cookie操作
+ * @author chwech
+ * @date 2020-01-06
+ * @class Cookie
+ */
 class Cookie {
   constructor() {}
-  //获取cookie
+  /**
+   * 获取cookie
+   * @date 2020-01-06
+   * @param {string} name
+   * @returns {(string | null)}
+   * @memberof Cookie
+   */
   get(name: string): string | null {
     var cookieName: string = encodeURIComponent(name) + "=",
       cookieStart: number = document.cookie.indexOf(cookieName),
@@ -18,7 +31,19 @@ class Cookie {
 
     return cookieValue;
   }
-  //设置cookie
+  
+  /**
+   *
+   * 设置cookie
+   * @date 2020-01-06
+   * @param {string} name
+   * @param {string} value
+   * @param {Date} expires
+   * @param {string} path
+   * @param {string} domain
+   * @param {string} secure
+   * @memberof Cookie
+   */
   set(name: string, value: string, expires: Date, path: string, domain: string, secure: string): void {
     var cookieText: string = encodeURIComponent(name) + "=" + encodeURIComponent(value);
 
@@ -37,7 +62,17 @@ class Cookie {
 
     document.cookie = cookieText;
   }
-  //删除cookie
+
+  /**
+   *
+   * 删除cookie
+   * @date 2020-01-06
+   * @param {string} name
+   * @param {string} path
+   * @param {string} domain
+   * @param {string} secure
+   * @memberof Cookie
+   */
   unset(name: string, path: string, domain: string, secure: string): void {
     this.set(name, "", new Date(0), path, domain, secure);
   }
