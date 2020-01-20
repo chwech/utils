@@ -1,4 +1,4 @@
-import { serializeQueryStr, transferUrl } from './utils'
+import { serializeQueryStr, transferUrl } from './utils.ts'
 
 it('test function: serializeQueryStr. it serialize an object to string', () => {
   expect(serializeQueryStr({

@@ -4,7 +4,7 @@
   "description": "我的工具类库",
   "main": "dist/chwech-utils.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --config webpack.config.js --color",
     "dev": "tsc -p tsconfig.json --watch",
     "doc": "jsdoc README.md dist -r -d docs"
@@ -12,6 +12,11 @@
   "author": "chwech",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
