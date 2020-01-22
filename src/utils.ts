@@ -85,3 +85,16 @@ export function filterNull(o: plainObject): plainObject {
   }
   return o
 }
+
+/**
+ * 中断执行线程一段时间
+ * @date 2020-01-21
+ * @export
+ * @param {number} timeout 等待时间
+ * @returns {Promise<string>} 返回promise，如果promise resolve则中断结束
+ */
+export function sleep(timeout: number): Promise<string> {
+  return new Promise(resolve => {
+    setTimeout(() => { resolve('done') }, timeout);
+  })
+}
