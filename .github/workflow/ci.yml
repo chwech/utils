@@ -1,0 +1,17 @@
+name: ci
+on:
+  push:
+    branches:
+      - master
+jobs:
+  jest:
+    name: run test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.2
+
+      - name: run jest test script
+        run: |
+          npm i
+          npm run test
