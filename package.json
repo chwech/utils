@@ -4,7 +4,7 @@
   "description": "我的工具类库",
   "main": "dist/chwech-utils.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack --config webpack.config.js --color",
     "dev": "tsc -p tsconfig.json --watch",
     "doc": "jsdoc README.md dist -r -d docs"
