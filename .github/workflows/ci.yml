@@ -11,6 +11,9 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.2
 
+      - name: checkout master
+        uses: actions/checkout@v2
+  
       - name: run jest test script
         run: |
           npm i
